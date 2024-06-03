@@ -8,7 +8,7 @@ export default function Result() {
           {/* Heading */}
           <div className="py-8 w-full lg:w-max">
             <h2 className="mb-2 text-center font-bold text-4xl text-blue-700">GOJI CREAM</h2>
-            <p className="pr-4 text-center lg:text-right font-bold text-sm text-black">كريم البشرة المثالي</p>
+            <p className="pr-4 text-center lg:text-right font-bold text-sm text-black">The perfect skin cream</p>
           </div>
           <div className="py-8 flex flex-col md:flex-row items-center md:flex-start justify-center md:justify-between gap-8 md:gap-4">
             <LeftSubColOne />
@@ -52,9 +52,9 @@ function LeftSubColTwo() {
       {/* Top */}
       <div className="mb-8 flex flex-col gap-2">
         {[
-          "يقضي على التجاعيد بنسبة 95٪",
-          "يحسن ترطيب البشرة بنسبة 84٪",
-          "يزيد من مرونة البشرة بنسبة 73٪",
+          "Eliminates wrinkles by 95%",
+          "Improves skin hydration by 84%",
+          "Increases skin elasticity by 73%"
         ].map((item, index) => (
           <div className="flex items-center gap-4" key={index}>
             <p className="flex-grow text-right text-lg">{item}</p>
@@ -74,8 +74,8 @@ function LeftSubColTwo() {
 function ResultCard(props: { img: string, after?: boolean, }) {
   return (
     <div className={`min-w-36 min-h-36 aspect-square relative bg-cover bg-no-repeat ${!props.after ? "rounded-tl-3xl rounded-bl-3xl": "rounded-tr-3xl rounded-br-3xl"}`} style={{ backgroundImage: `url('${props.img}')` }}>
-      <span className={`w-1/2 text-center absolute bottom-2 left-2 px-4 py-1 block bg-white border-2 rounded-3xl ${!props.after ? "text-red-700 border-red-700" : "text-blue-700 border-blue-700"}`}>
-        {!props.after ? "قبل": "بعد"}
+      <span className={`w-0/3 text-center absolute bottom-2 left-2 px-4 py-1 block bg-white border-2 rounded-3xl ${!props.after ? "text-red-700 border-red-700" : "text-blue-700 border-blue-700"}`}>
+        {!props.after ? "Before": "After"}
       </span>
     </div>
   )

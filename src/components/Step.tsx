@@ -3,27 +3,26 @@ export default function Step() {
     <section className="bg-gradient-to-b from-sky-50 to-sky-300">
       {/* Header */}
       <div className="relative px-8 py-12 text-left">
-        <h2 className="mb-6 px-4 text-2xl md:text-4xl text-right text-sky-700">هو الحل الأمثل <span className="text-blue-700">GOJI CREAM</span></h2>
+        <h2 className="mb-6 px-4 text-2xl md:text-4xl text-right text-sky-700"><span className="text-blue-700">GOJI CREAM</span> IS THE PERFECT SOLUTION</h2>
         <div className="h-16">
-          <p className="md:w-full md:absolute md:-left-[10%] md:text-right px-28 h-16 flex items-center justify-center md:justify-end text-lg md:text-3xl bg-pink-500 text-white rounded-full">لتجديد البشرة</p>
+          <p className="md:w-full md:absolute md:-left-[10%] md:text-right px-28 h-16 flex items-center justify-center md:justify-end text-lg md:text-3xl bg-pink-500 text-white rounded-full">To Rejuvenate the skin</p>
         </div>
       </div>
 
       <div className="flex flex-col lg:flex-row items-center lg:items-stretch  gap-8">
         {/* Left */}
         <div className="lg:w-1/2 p-8">
-          <h3 className="mb-8 text-right font-bold text-2xl md:text-3xl">نضارة <span className="text-pink-700">بشرتك في</span> 3 خطوات <span className="text-pink-700">استعيدي</span></h3>
-          
+          <h3 className="mb-8 text-right font-bold text-2xl md:text-3xl">Freshness of your skin in 3 steps <span className="text-pink-700">restore</span></h3>         
           <div className="py-4 flex flex-col gap-8">
-            <StepCard name="الخطوة الأولى:" des="نظّفي بشرتك بعمق حتى تنقيها من الشوائب، ويمكنك أن تأخذي حمامًا." img="/steps_img1.jpg" />
-            <StepCard name="الخطوة الثانية:" des="وزعي Goji Cream على المناطق المتأثرة و دلكي بعناية حتى تمتصه البشرة تمامًا ." img="/steps_img1.jpg" />
-            <StepCard name="الخطوة الثالثة:" des="كرري هذه الخطوات لكي تستمتعي بالنتائج المذهلة بعد 3 أسابيع ." img="/steps_img1.jpg" />
+            <StepCard name="First Step:" des="Cleanse your skin deeply to purify impurities, and you can take a bath." img="/steps_img1.jpg" />
+            <StepCard name="Second Step:" des="Spread Goji Cream over the affected areas and massage carefully until completely absorbed into the skin." img="/steps_img1.jpg" />
+            <StepCard name="Third Step:" des="Repeat these steps to enjoy amazing results after 3 weeks." img="/steps_img1.jpg" />
           </div>
         </div>
 
         {/* Right */}
         <div className="lg:w-1/2 flex-grow flex flex-col justify-between">
-          <h3 className="mx-8 lg:mx-0 mb-8 lg:mb-0 px-8 py-2 text-center font-semibold md:text-2xl bg-white rounded-3xl lg:rounded-none lg:rounded-tl-3xl lg:rounded-bl-3xl">كريم <span className="text-blue-700">GOJI CREAM</span> آمن و سهل الاستخدام</h3>
+          <h3 className="mx-8 lg:mx-0 mb-8 lg:mb-0 px-8 py-2 text-center font-semibold md:text-2xl bg-white rounded-3xl lg:rounded-none lg:rounded-tl-3xl lg:rounded-bl-3xl"><span className="text-blue-700">GOJI CREAM</span> IS SAFE AND EASY TO USE</h3>
           {/* img */}
           <div className="w-full h-full flex items-end justify-center lg:justify-end">
             <img className="w-10/12 h-10/12 object-cover" src="/pic.png" alt="step-model" />

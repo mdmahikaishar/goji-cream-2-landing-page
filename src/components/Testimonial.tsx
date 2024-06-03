@@ -1,10 +1,13 @@
+"use client";
+import { useRef, useState } from "react";
+
 export default function Testimonial() {
   return (
     <section className="bg-no-repeat bg-cover" style={{ backgroundImage: "url('/bg.jpg')" }}>
       <div className="holder p-8">
         {/* Heading */}
         <div className="mb-8 max-w-md mx-auto text-center">
-          <p className="h-16 flex items-center justify-center text-3xl bg-pink-500 text-white rounded-full">آراء العملاء</p>
+          <p className="h-16 flex items-center justify-center text-3xl bg-pink-500 text-white rounded-full">Customer Reviews</p>
         </div>
 
         {/* Content */}
@@ -17,22 +20,31 @@ export default function Testimonial() {
 }
 
 function Slider() {
+  const [activeSlide, setActiveSlide] = useState(0);
+  const slider = useRef({} as HTMLDivElement);
+  const container = useRef({} as HTMLDivElement);
+
+  const handleClick = (index: number) => () => {
+    setActiveSlide(index);
+  }
+
+  
   return (
     <>
-      <div className="mb-8 w-[20rem] md:w-[40rem] mx-auto rounded-3xl scroll-y-hidden border-2 border-gray-200">
+      <div className="mb-8 w-[20rem] md:w-[40rem] mx-auto bg-white rounded-3xl scroll-y-hidden border-2 border-gray-200" ref={slider}>
         {/* Slider Container */}
-        <div className="flex">
-          <TestimonialCard name="ديانا، 45 عامًا" des="كريم Goji Cream هدية من السماء - في أسبوعين فقط من الاستخدام المنتظم قلت التجاعيد بشكل واضح، وأصبحت معالم وجهي أكثر تحديدًا وبشرتي أكثر مرونة، بعد النتائج التي حصلت عليها أنصح الجميع باستخدامه، لا تخافي من استخدام هذا الكريم الرائع فلن يخيب آمالك." img="/ava1.jpg" />
-          <TestimonialCard name="Placeholder 2" des="Describiton Placeholder 3" img="/ava2.jpg" />
-          <TestimonialCard name="Placeholder 2" des="Describiton Placeholder 3" img="/ava3.jpg" />
+        <div className="flex transition-all duration-200" ref={container} style={{ transform: `translateX(calc(${activeSlide} * -100%))` }}>
+          <TestimonialCard name="Diana, 45 years old" des="Goji Cream is a gift from heaven - in just two weeks of regular use wrinkles have decreased visibly, my facial features have become more defined and my skin is more elastic, after the results I have obtained I advise everyone to use it, do not be afraid to use this wonderful cream will not disappoint you." img="/ava1.jpg" />
+          <TestimonialCard name="Placeholder 2" des="Describiton Placeholder 2" img="/ava2.jpg" />
+          <TestimonialCard name="Placeholder 3" des="Describiton Placeholder 3" img="/ava3.jpg" />
         </div>
       </div>
       
       {/* Controller */}
       <div className="mx-auto w-fit p-2 flex items-center gap-4 bg-white rounded-3xl border-2 border-gray-200">
-        <div className={`h-6 aspect-square ${true ? "bg-blue-700" : "bg-white"} border border-sky-500 rounded-full`}></div>
-        <div className={`h-6 aspect-square ${true ? "bg-blue-700" : "bg-white"} border border-sky-500 rounded-full`}></div>
-        <div className={`h-6 aspect-square ${true ? "bg-blue-700" : "bg-white"} border border-sky-500 rounded-full`}></div>
+        <button className={`h-6 aspect-square ${activeSlide === 0 ? "bg-blue-700" : "bg-white hover:bg-blue-500"} border border-sky-500 rounded-full`} onClick={handleClick(0)}></button>
+        <button className={`h-6 aspect-square ${activeSlide === 1 ? "bg-blue-700" : "bg-white hover:bg-blue-500"} border border-sky-500 rounded-full`} onClick={handleClick(1)}></button>
+        <button className={`h-6 aspect-square ${activeSlide === 2 ? "bg-blue-700" : "bg-white hover:bg-blue-500"} border border-sky-500 rounded-full`} onClick={handleClick(2)}></button>
       </div>
     </>
   )

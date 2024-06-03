@@ -14,7 +14,7 @@ export default function FormCard({timer}: {timer?:boolean}) {
       {/* Form Timer */}
       {timer && (
         <div className="text-white">
-          <h3 className="mb-4 text-center text-xl">الخصم مستمر حتى:</h3>
+          <h3 className="mb-4 text-center text-xl">The discount is continuous until:</h3>
 
           <div className="flex item-center justify-center gap-4">
             <div className=""></div>
@@ -77,17 +77,17 @@ function FormMain() {
           <h3 className="font-bold text-2xl md:text-5xl text-red-700">EG 649</h3>
         </div>
         <div className="p-4 bg-blue-700 text-white rounded-bl-2xl rounded-br-2xl">
-          <span className="md:text-xl">اليوم فقط احصلي على</span>
-          <h3 className="font-bold text-2xl md:text-3xl">خصم 50%</h3>
+          <span className="md:text-xl">Just Today Get</span>
+          <h3 className="font-bold text-2xl md:text-3xl">50% OFF</h3>
         </div>
       </div>
 
       {/* Form Body */}
       <form className="max-w-[15rem] md:mx-w-[auto] mx-auto lg:px-4 pt-2 lg:pt-6 pb-4 lg:pb-8 flex flex-col gap-4">
         <Input type="select" option={["Egypt", "Bangladesh"]} />
-        <Input placeholder="احصلي" />
-        <Input placeholder="احصلي" />
-        <button className="h-10 px-4 font-bold text-sm bg-gradient-to-b from-yellow-300 to-yellow-500 rounded-3xl shadow-lg">احصلي</button>
+        <Input placeholder="User Name" />
+        <Input placeholder="Email" />
+        <button className="h-10 px-4 font-bold text-sm bg-gradient-to-b from-yellow-300 to-yellow-500 rounded-3xl shadow-lg">Get</button>
       </form>
     </div>
   )

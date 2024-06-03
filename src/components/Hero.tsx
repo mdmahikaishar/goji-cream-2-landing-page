@@ -9,7 +9,7 @@ export default function Hero() {
           {/* Heading */}
           <div className="w-max mx-auto">
             <h2 className="mb-2 font-bold text-4xl text-blue-700">GOJI CREAM</h2>
-            <p className="pr-4 text-right font-bold text-sm text-black">كريم البشرة المثالي</p>
+            <p className="pr-4 text-right font-bold text-sm text-black">The perfect skin cream</p>
           </div>
 
           <HeroOffer />
@@ -74,11 +74,11 @@ function HeroOffer() {
       <div className="lg:absolute lg:-left-[20%] flex flex-col-reverse lg:flex-row items-center gap-4 lg:gap-2">
         {/* Hero Offer Wrapping */}
         <div className="flex-none w-[19rem] h-[6rem] pb-6 grid place-items-center bg-contain bg-no-repeat" style={{ backgroundImage: "url('/health_bend.png')" }}>
-          <span className="font-bold text-2xl text-white">في 27 يومًا فقط</span>
+          <span className="font-bold text-2xl text-white">in just 27 days</span>
         </div>
 
         {/* Hero Offer Text */}
-        <p className="flex-grow lg:mb-6 font-bold text-xl text-pink-500">ببشرة جميلة ونضرة <span className="text-blue-700">لتستمتعي</span></p>
+        <p className="flex-grow lg:mb-6 font-bold text-xl text-pink-500">With beautiful and fresh skin to <span className="text-blue-700">enjoy</span></p>
       </div>
     </div>
   )
