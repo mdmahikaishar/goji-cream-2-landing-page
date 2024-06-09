@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Goji Cream 2 Landing Page",
   description: "",
-  authors: [{name:"mdmahikaishar",url: "mahikaishar@gmail.com"}]
+  authors: [{ name:"mdmahikaishar",url: "mahikaishar@gmail.com" }]
 };
 
 export default function RootLayout({

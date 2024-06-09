@@ -8,8 +8,8 @@ export default function Hero() {
         <div className="lg:w-1/2 py-8 flex flex-col items-center lg:items-start gap-4">
           {/* Heading */}
           <div className="w-max mx-auto">
-            <h2 className="mb-2 font-bold text-4xl text-blue-700">GOJI CREAM</h2>
-            <p className="pr-4 text-right font-bold text-sm text-black">The perfect skin cream</p>
+            <h2 className="mb-2 font-bold text-4xl text-blue-700">গোজি ক্রিম</h2>
+            <p className="pr-4 text-right font-bold text-sm text-black">নিখুঁত ত্বকের ক্রিম</p>
           </div>
 
           <HeroOffer />
@@ -74,11 +74,11 @@ function HeroOffer() {
       <div className="lg:absolute lg:-left-[20%] flex flex-col-reverse lg:flex-row items-center gap-4 lg:gap-2">
         {/* Hero Offer Wrapping */}
         <div className="flex-none w-[19rem] h-[6rem] pb-6 grid place-items-center bg-contain bg-no-repeat" style={{ backgroundImage: "url('/health_bend.png')" }}>
-          <span className="font-bold text-2xl text-white">in just 27 days</span>
+          <span className="font-bold text-2xl text-white">মাত্র 27 দিনের মধ্যে</span>
         </div>
 
         {/* Hero Offer Text */}
-        <p className="flex-grow lg:mb-6 font-bold text-xl text-pink-500">With beautiful and fresh skin to <span className="text-blue-700">enjoy</span></p>
+        <p className="flex-grow lg:mb-6 font-bold text-xl text-pink-500">সুন্দর এবং সতেজ ত্বকের সাথে <span className="text-blue-700">উপভোগ</span></p>
       </div>
     </div>
   )

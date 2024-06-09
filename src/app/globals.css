@@ -9,6 +9,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .scroll-y-hidden {
   overflow-y: hidden;
   overflow-x: scroll;
