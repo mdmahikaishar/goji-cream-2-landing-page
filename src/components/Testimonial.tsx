@@ -7,11 +7,11 @@ export default function Testimonial() {
       <div className="holder p-8">
         {/* Heading */}
         <div className="mb-8 max-w-md mx-auto text-center">
-          <p className="h-16 flex items-center justify-center text-3xl bg-pink-500 text-white rounded-full">ক্রেতার পর্যালোচনা</p>
+          <p className="h-16 flex items-center justify-center md:text-2xl bg-pink-500 text-white rounded-full">ক্রেতার পর্যালোচনা</p>
         </div>
 
         {/* Content */}
-        <div className="">
+        <div className="w-full">
           <Slider />
         </div>
       </div>
@@ -31,7 +31,7 @@ function Slider() {
   
   return (
     <>
-      <div className="mb-8 w-[20rem] md:w-[40rem] mx-auto bg-white rounded-3xl scroll-y-hidden border-2 border-gray-200" ref={slider}>
+      <div className="mb-8 w-full mx-auto bg-white rounded-3xl scroll-y-hidden border-2 border-gray-200" ref={slider}>
         {/* Slider Container */}
         <div className="grid grid-cols-[repeat(3,100%)] transition-all duration-200" ref={container} style={{ transform: `translateX(calc(${activeSlide} * -100%))` }}>
           <TestimonialCard name="ডায়ানা, 45 বছর বয়সী" des="গোজি ক্রিম স্বর্গ থেকে একটি উপহার - নিয়মিত ব্যবহারের মাত্র দুই সপ্তাহে বলিরেখা দৃশ্যমানভাবে হ্রাস পেয়েছে, আমার মুখের বৈশিষ্ট্যগুলি আরও সংজ্ঞায়িত হয়েছে এবং আমার ত্বক আরও স্থিতিস্থাপক হয়েছে, ফলাফল পাওয়ার পরে আমি সবাইকে এটি ব্যবহার করার পরামর্শ দিচ্ছি, এমন করবেন না এই বিস্ময়কর ক্রিম ব্যবহার করতে ভয় আপনি হতাশ হবে না." img="/ava1.jpg" />
@@ -52,13 +52,13 @@ function Slider() {
 
 function TestimonialCard(props: {name:string, des: string, img: string}) {
   return (
-    <div className="min-w-[20rem] md:min-w-[40rem] p-8 flex flex-col-reverse md:flex-row items-center gap-8 bg-white text-black rounded-3xl">
+    <div className="w-full p-4 sm:p-8 flex flex-col-reverse md:flex-row items-center gap-8 bg-white text-black rounded-3xl">
       <div className="flex-none h-32 aspect-square rounded-full overflow-hidden">
         <img className="w-full h-full object-cover" src={props.img} alt={props.name} />
       </div>
       <div className="flex-grow flex flex-col items-center md:items-start gap-4 text-center md:text-left">
-        <h3 className="font-bold text-xl ">{props.name}</h3>
-        <p className="text-red-700">{props.des}</p>
+        <h3 className="font-bold sm:text-xl">{props.name}</h3>
+        <p className="text-xs sm:text-sm text-red-700">{props.des}</p>
       </div>
     </div>
   )

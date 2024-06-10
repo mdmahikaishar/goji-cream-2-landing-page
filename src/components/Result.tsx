@@ -57,8 +57,8 @@ function LeftSubColTwo() {
                                   "ত্বকের স্থিতিস্থাপকতা 73% বৃদ্ধি করে"
         ].map((item, index) => (
           <div className="flex items-center gap-4" key={index}>
-            <img className="flex-none h-10 apsect-square object-container" src="ok.png" alt="check" />
-            <p className="flex-grow text-lg">{item}</p>
+            <img className="flex-none h-4 sm:h-8 apsect-square object-container" src="ok.png" alt="check" />
+            <p className="text-sm sm:text-base md:flex-grow">{item}</p>
           </div>
         ))}
       </div>
@@ -73,7 +73,7 @@ function LeftSubColTwo() {
 
 function ResultCard(props: { img: string, after?: boolean, }) {
   return (
-    <div className={`min-w-36 min-h-36 aspect-square relative bg-cover bg-no-repeat ${!props.after ? "rounded-tl-3xl rounded-bl-3xl": "rounded-tr-3xl rounded-br-3xl"}`} style={{ backgroundImage: `url('${props.img}')` }}>
+    <div className={`min-w-28 sm:min-w-36 aspect-square relative bg-cover bg-no-repeat ${!props.after ? "rounded-tl-3xl rounded-bl-3xl": "rounded-tr-3xl rounded-br-3xl"}`} style={{ backgroundImage: `url('${props.img}')` }}>
       <span className={`w-0/3 text-center absolute bottom-2 left-2 px-4 py-1 block font-semibold text-sm bg-white border-2 rounded-3xl ${!props.after ? "text-red-700 border-red-700" : "text-blue-700 border-blue-700"}`}>
         {!props.after ? "আগে": "পরে"}
       </span>

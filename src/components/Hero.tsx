@@ -73,12 +73,12 @@ function HeroOffer() {
     <div className="mb-8 lg:mb-0 w-full h-[6rem] relative">
       <div className="lg:absolute lg:-left-[20%] flex flex-col-reverse lg:flex-row items-center gap-4 lg:gap-2">
         {/* Hero Offer Wrapping */}
-        <div className="flex-none w-[19rem] h-[6rem] pb-6 grid place-items-center bg-contain bg-no-repeat" style={{ backgroundImage: "url('/health_bend.png')" }}>
-          <span className="font-bold text-2xl text-white">মাত্র 27 দিনের মধ্যে</span>
+        <div className="flex-none w-[14rem] h-[5rem] sm:w-[19rem] sm:h-[6rem] pb-6 grid place-items-center bg-contain bg-no-repeat" style={{ backgroundImage: "url('/health_bend.png')" }}>
+          <span className="text-xs sm:text-base font-bold text-white">মাত্র 27 দিনের মধ্যে</span>
         </div>
 
         {/* Hero Offer Text */}
-        <p className="flex-grow lg:mb-6 font-bold text-xl text-pink-500">সুন্দর এবং সতেজ ত্বকের সাথে <span className="text-blue-700">উপভোগ</span></p>
+        <p className="flex-grow lg:mb-6 font-bold text-center md:text-left text-sm md:text-xl text-pink-500">সুন্দর এবং সতেজ ত্বকের সাথে <span className="text-blue-700">উপভোগ</span></p>
       </div>
     </div>
   )
